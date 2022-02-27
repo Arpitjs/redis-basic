@@ -23,7 +23,7 @@ app.get("/photos", async function (req, res) {
       await client.setEx("photos", 3600, JSON.stringify(data));
       res.json(data);
     } catch(error) {
-      console.error('error>>', error)
+      console.error('error..>>', error)
       res.json({data: error})
     }
   }
